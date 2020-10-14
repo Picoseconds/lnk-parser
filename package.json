@@ -16,5 +16,8 @@
 	},
 	"bin": {
 		"lnk-parse": "./dist/cli.ts"
-	}
+	},
+	"scripts": {
+    "commit": "cz"
+  }
 }
