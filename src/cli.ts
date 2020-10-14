@@ -14,7 +14,6 @@ interface ParseArgs extends Argv {
  * @param argv the arguments
  */
 async function parse(argv: ParseArgs) {
-	console.log(argv);
 	const lnkPath =
 		argv.lnkfile ||
 		(
@@ -42,7 +41,6 @@ async function parse(argv: ParseArgs) {
 		if (argv.prettify) console.log(JSON.stringify(parsed, null, '  '));
 		else console.log(JSON.stringify(parsed));
 	} catch (err: unknown) {
-		console.log(err);
 		if (err instanceof Error && (err as any)['code']) {
 			let fsError = err as NodeJS.ErrnoException;
 
