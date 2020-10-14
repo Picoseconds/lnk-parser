@@ -366,7 +366,10 @@ class LNKParser {
 			lnkFile.showCommand = ShowCommands.Normal;
 		}
 
-		lnkFile.hotKey = new HotKeyFlags(this.buffer[this.offset + readOffset], this.buffer[this.offset + readOffset + 1]);
+		lnkFile.hotKey = new HotKeyFlags(
+			this.buffer[this.offset + readOffset],
+			this.buffer[this.offset + readOffset + 1]
+		);
 
 		// Extra 10 due to reserved values that are always zero right after HotKeyFlags
 		readOffset += 12;
